@@ -10,7 +10,7 @@ class NLJsonConan(ConanFile):
     settings = None #header only
 
     def source(self):
-	download("https://github.com/nlohmann/json/releases/download/v%s/json.hpp" % self.version, "json.hpp")
+        download("https://github.com/nlohmann/json/releases/download/v%s/json.hpp" % self.version, "json.hpp")
 
     def build(self):
         None #header only
