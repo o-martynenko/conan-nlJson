@@ -3,7 +3,7 @@ from conans.tools import download, unzip
 
 class NLJsonConan(ConanFile):
     name = "nlJson"
-    version = "2.0.2"
+    version = "2.0.7"
     url = "https://github.com/arnemertz/conan-nlJson.git"
     license = "MIT"
     author = "Arne Mertz (arne-mertz.de/contact-me)"
