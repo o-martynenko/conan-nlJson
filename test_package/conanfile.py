@@ -5,9 +5,10 @@ import os
 channel = os.getenv("CONAN_CHANNEL", "stable")
 username = os.getenv("CONAN_USERNAME", "arnemertz")
 
+
 class NLJsonConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "nlJson/2.0.7@%s/%s" % (username, channel)
+    requires = "nlJson/2.0.8@%s/%s" % (username, channel)
     generators = "cmake"
 
     def build(self):
@@ -17,4 +18,4 @@ class NLJsonConan(ConanFile):
 
     def test(self):
         # equal to ./bin/greet, but portable win: .\bin\greet
-        self.run(os.sep.join([".","bin", "greet"]))
+        self.run(os.sep.join([".", "bin", "greet"]))
