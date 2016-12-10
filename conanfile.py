@@ -9,6 +9,8 @@ class NLJsonConan(ConanFile):
     license = "MIT"
     author = "Arne Mertz (arne-mertz.de/contact-me)"
     settings = None  # header only
+    options = {"path": "ANY"}
+    default_options = "path="
 
     def source(self):
         download("https://github.com/nlohmann/json/releases/download/v%s/json.hpp" % self.version, "json.hpp")
@@ -17,5 +19,8 @@ class NLJsonConan(ConanFile):
         del self  # header only
 
     def package(self):
-        self.copy("*.hpp", dst="include")
+        header_dir = "include"
+        if self.options.path != "":
+            header_dir += "/" + str(self.options.path)
+        self.copy("*.hpp", dst=header_dir)
 
