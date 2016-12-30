@@ -8,7 +8,7 @@ username = os.getenv("CONAN_USERNAME", "arnemertz")
 
 class NLJsonConan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
-    requires = "nlJson/2.0.8@%s/%s" % (username, channel)
+    requires = "nlJson/2.0.9@%s/%s" % (username, channel)
     generators = "cmake"
 
     def build(self):

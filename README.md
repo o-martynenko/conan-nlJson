@@ -4,5 +4,5 @@ Simple conan package for the header-only "JSON for modern C++" library by Niels 
 
 **Usage:**
 
-In your conanfile, add `nlJson/2.0.8@arnemertz/stable` in the `[requires]` section.
+In your conanfile, add `nlJson/2.0.9@arnemertz/stable` in the `[requires]` section.
 
