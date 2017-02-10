@@ -4,10 +4,10 @@ from conans.tools import download, unzip
 
 class NLJsonConan(ConanFile):
     name = "nlJson"
-    version = "2.0.9"
-    url = "https://github.com/arnemertz/conan-nlJson.git"
+    version = "2.1.0"
+    url = "https://github.com/o-martynenko/conan-nlJson.git"
     license = "MIT"
-    author = "Arne Mertz (arne-mertz.de/contact-me)"
+    author = "Arne Mertz, forked by Oleg Martynenko"
     settings = None  # header only
     options = {"path": "ANY"}
     default_options = "path="
